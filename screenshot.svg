@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- =========================================================
+       Dark Knight — Obsidian theme preview (stand-in screenshot)
+       ========================================================= -->
+  <defs>
+    <linearGradient id="goldBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#b8920f"/>
+      <stop offset="50%" stop-color="#ffdb4d"/>
+      <stop offset="100%" stop-color="#b8920f"/>
+    </linearGradient>
+    <linearGradient id="hrFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#f5c518" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#f5c518" stop-opacity="0.55"/>
+      <stop offset="80%" stop-color="#f5c518" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f5c518" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="65%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1600" height="1000" fill="#0a0a0c"/>
+
+  <!-- ============== TITLE BAR ============== -->
+  <rect x="0" y="0" width="1600" height="34" fill="#0a0a0c"/>
+  <line x1="0" y1="34" x2="1600" y2="34" stroke="#2a2a35" stroke-width="1"/>
+  <!-- traffic lights -->
+  <circle cx="20" cy="17" r="6" fill="#c8252c"/>
+  <circle cx="40" cy="17" r="6" fill="#f5c518"/>
+  <circle cx="60" cy="17" r="6" fill="#4a8b4a"/>
+  <text x="800" y="22" fill="#f5c518" font-size="12" text-anchor="middle" font-weight="600" letter-spacing="0.05em">GOTHAM VAULT — case-files/the-long-halloween.md</text>
+
+  <!-- ============== LEFT RIBBON ============== -->
+  <rect x="0" y="34" width="48" height="966" fill="#0a0a0c"/>
+  <line x1="48" y1="34" x2="48" y2="1000" stroke="#2a2a35" stroke-width="1"/>
+
+  <!-- ribbon icons (simple glyphs) -->
+  <g stroke="#8a8a96" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- search -->
+    <g transform="translate(16,60)">
+      <circle cx="8" cy="8" r="6"/>
+      <line x1="13" y1="13" x2="17" y2="17"/>
+    </g>
+    <!-- new file -->
+    <g transform="translate(16,100)">
+      <path d="M3 1 H11 L17 7 V17 H3 Z"/>
+      <path d="M11 1 V7 H17"/>
+    </g>
+    <!-- graph (active — gold) -->
+    <g transform="translate(16,140)" stroke="#f5c518">
+      <circle cx="10" cy="10" r="3"/>
+      <circle cx="3"  cy="3"  r="2"/>
+      <circle cx="17" cy="4"  r="2"/>
+      <circle cx="4"  cy="17" r="2"/>
+      <circle cx="17" cy="17" r="2"/>
+      <line x1="10" y1="10" x2="3"  y2="3"/>
+      <line x1="10" y1="10" x2="17" y2="4"/>
+      <line x1="10" y1="10" x2="4"  y2="17"/>
+      <line x1="10" y1="10" x2="17" y2="17"/>
+    </g>
+    <!-- bookmark -->
+    <g transform="translate(16,180)">
+      <path d="M4 2 H16 V18 L10 14 L4 18 Z"/>
+    </g>
+    <!-- tag -->
+    <g transform="translate(16,220)">
+      <path d="M2 10 L10 2 H17 V9 L9 17 Z"/>
+      <circle cx="13" cy="6" r="1.2" fill="#8a8a96" stroke="none"/>
+    </g>
+    <!-- settings (bottom) -->
+    <g transform="translate(16,940)">
+      <circle cx="10" cy="10" r="3"/>
+      <path d="M10 1 V4 M10 16 V19 M1 10 H4 M16 10 H19 M3.5 3.5 L5.5 5.5 M14.5 14.5 L16.5 16.5 M3.5 16.5 L5.5 14.5 M14.5 5.5 L16.5 3.5"/>
+    </g>
+  </g>
+  <!-- active indicator -->
+  <rect x="0" y="138" width="3" height="24" fill="#f5c518"/>
+
+  <!-- ============== FILE EXPLORER ============== -->
+  <rect x="48" y="34" width="280" height="966" fill="#0a0a0c"/>
+  <line x1="328" y1="34" x2="328" y2="1000" stroke="#2a2a35" stroke-width="1"/>
+
+  <!-- explorer header -->
+  <text x="68" y="68" fill="#8a8a96" font-size="11" letter-spacing="0.12em" font-weight="600">GOTHAM VAULT</text>
+  <line x1="68" y1="80" x2="308" y2="80" stroke="#2a2a35"/>
+
+  <!-- folders / files -->
+  <g font-size="13" fill="#d4d4dc">
+    <!-- folder: case-files (open) -->
+    <text x="72" y="104" fill="#8a8a96" font-size="10">▾</text>
+    <text x="88" y="104" font-weight="500">case-files</text>
+    <text x="104" y="126">the-long-halloween.md</text>
+    <!-- active file pill -->
+    <rect x="100" y="138" width="208" height="22" rx="4" fill="#f5c518" fill-opacity="0.12"/>
+    <rect x="100" y="138" width="2"  height="22" fill="#f5c518"/>
+    <text x="108" y="153" fill="#f5c518">the-killing-joke.md</text>
+    <text x="104" y="174">arkham-asylum.md</text>
+    <text x="104" y="194">two-face-coin.md</text>
+
+    <text x="72" y="222" fill="#8a8a96" font-size="10">▸</text>
+    <text x="88" y="222" font-weight="500">allies</text>
+    <text x="72" y="246" fill="#8a8a96" font-size="10">▾</text>
+    <text x="88" y="246" font-weight="500">villains</text>
+    <text x="104" y="268">joker.md</text>
+    <text x="104" y="288">scarecrow.md</text>
+    <text x="104" y="308">bane.md</text>
+
+    <text x="72" y="336" fill="#8a8a96" font-size="10">▸</text>
+    <text x="88" y="336" font-weight="500">gear</text>
+    <text x="72" y="360" fill="#8a8a96" font-size="10">▸</text>
+    <text x="88" y="360" font-weight="500">gotham-pd</text>
+
+    <text x="88" y="384" fill="#d4d4dc">daily-2026-05-27.md</text>
+    <text x="88" y="404" fill="#d4d4dc">index.md</text>
+  </g>
+
+  <!-- explorer footer hint -->
+  <text x="68" y="970" fill="#5a5a66" font-size="10">14 notes · 4 folders</text>
+
+  <!-- ============== TAB STRIP ============== -->
+  <rect x="328" y="34" width="1272" height="40" fill="#0a0a0c"/>
+  <line x1="328" y1="74" x2="1600" y2="74" stroke="#2a2a35" stroke-width="1"/>
+
+  <!-- active tab (gold spotlight) -->
+  <g>
+    <rect x="344" y="40" width="240" height="34" rx="4" fill="#14141a" stroke="#2a2a35"/>
+    <!-- hide bottom border by overlapping with the night-color tab bottom -->
+    <rect x="345" y="72" width="238" height="3" fill="#14141a"/>
+    <rect x="344" y="40" width="240" height="2" fill="url(#goldBar)"/>
+    <text x="360" y="61" fill="#f5c518" font-size="12" font-weight="600" filter="url(#goldGlow)">the-killing-joke.md</text>
+    <text x="568" y="61" fill="#8a8a96" font-size="14">×</text>
+  </g>
+
+  <!-- inactive tabs -->
+  <g font-size="12" fill="#8a8a96">
+    <text x="600" y="61">arkham-asylum.md</text>
+    <text x="730" y="61">joker.md</text>
+    <text x="820" y="61">two-face-coin.md</text>
+    <text x="935" y="61">daily-2026-05-27.md</text>
+  </g>
+
+  <!-- right pane toggles -->
+  <g stroke="#8a8a96" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <g transform="translate(1500,52)">
+      <rect x="0" y="0" width="16" height="12" rx="1"/>
+      <line x1="10" y1="0" x2="10" y2="12"/>
+    </g>
+    <g transform="translate(1540,52)" stroke="#f5c518">
+      <circle cx="6" cy="6" r="5"/>
+      <line x1="9.5" y1="9.5" x2="13" y2="13"/>
+    </g>
+  </g>
+
+  <!-- ============== EDITOR PANE ============== -->
+  <rect x="328" y="74" width="1272" height="900" fill="#0a0a0c"/>
+
+  <!-- Editor content (centered column ~720px wide) -->
+  <g transform="translate(560,110)">
+    <!-- breadcrumb / frontmatter dossier strip -->
+    <rect x="0" y="0" width="2" height="80" fill="#f5c518"/>
+    <rect x="2" y="0" width="640" height="80" fill="#14141a" rx="0"/>
+    <text x="20" y="22" fill="#f5c518" font-size="10" font-family="JetBrains Mono, Menlo, monospace" letter-spacing="0.08em">CASE FILE</text>
+    <text x="20" y="42" fill="#8a8a96" font-size="11" font-family="JetBrains Mono, Menlo, monospace">tags:  #joker  #arkham  #cold-case</text>
+    <text x="20" y="60" fill="#8a8a96" font-size="11" font-family="JetBrains Mono, Menlo, monospace">date:  2026-05-27   ·   status:  open</text>
+
+    <!-- H1 -->
+    <text x="0" y="130" fill="#ffdb4d" font-size="34" font-weight="700" letter-spacing="-0.01em" filter="url(#goldGlow)">The Killing Joke</text>
+    <line x1="0" y1="142" x2="640" y2="142" stroke="#f5c518" stroke-opacity="0.25"/>
+
+    <!-- body paragraph -->
+    <g fill="#d4d4dc" font-size="14">
+      <text x="0" y="175">All it takes is one bad day to reduce the sanest man alive</text>
+      <text x="0" y="195">to lunacy. That's how far the world is from where I am.</text>
+      <text x="0" y="215">Just <tspan fill="#ffdb4d" font-weight="700">one</tspan> <tspan>·</tspan> <tspan fill="#6a8fb5" font-style="italic">bad day.</tspan></text>
+    </g>
+
+    <!-- H2 -->
+    <text x="0" y="260" fill="#f5c518" font-size="22" font-weight="650">Evidence</text>
+    <line x1="0" y1="270" x2="640" y2="270" stroke="#f5c518" stroke-opacity="0.15"/>
+
+    <!-- Blockquote -->
+    <rect x="0" y="290" width="3" height="74" fill="#f5c518"/>
+    <rect x="3" y="290" width="640" height="74" fill="#f5c518" fill-opacity="0.04"/>
+    <text x="22" y="316" fill="#d4d4dc" font-size="14" font-style="italic">"Why so serious? Let's put a smile on that face."</text>
+    <text x="22" y="340" fill="#8a8a96" font-size="12">— recovered from Ace Chemicals, evidence locker 7</text>
+
+    <!-- Tasks -->
+    <text x="0" y="400" fill="#f5c518" font-size="22" font-weight="650">Leads</text>
+    <line x1="0" y1="410" x2="640" y2="410" stroke="#f5c518" stroke-opacity="0.15"/>
+
+    <g font-size="14" fill="#d4d4dc">
+      <!-- checked -->
+      <rect x="0" y="425" width="14" height="14" rx="2" fill="#f5c518" stroke="#f5c518"/>
+      <path d="M4 432 L7 435 L11 429" stroke="#0a0a0c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="437" fill="#5a5a66" text-decoration="line-through">Sweep Ace Chemicals catwalk</text>
+
+      <rect x="0" y="450" width="14" height="14" rx="2" fill="#f5c518" stroke="#f5c518"/>
+      <path d="M4 457 L7 460 L11 454" stroke="#0a0a0c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="462" fill="#5a5a66" text-decoration="line-through">Pull GCPD case 0719</text>
+
+      <!-- unchecked -->
+      <rect x="0" y="475" width="14" height="14" rx="2" fill="none" stroke="#3a3a48" stroke-width="1.5"/>
+      <text x="24" y="487">Interview <tspan fill="#f5c518">[[Harleen Quinzel]]</tspan> at Arkham</text>
+
+      <rect x="0" y="500" width="14" height="14" rx="2" fill="none" stroke="#3a3a48" stroke-width="1.5"/>
+      <text x="24" y="512">Cross-reference with <tspan fill="#c8252c">[[long-halloween-killer]]</tspan></text>
+    </g>
+
+    <!-- HR -->
+    <line x1="0" y1="555" x2="640" y2="555" stroke="url(#hrFade)" stroke-width="1"/>
+
+    <!-- H3 -->
+    <text x="0" y="590" fill="#e8b412" font-size="18" font-weight="600">Bat-computer query</text>
+
+    <!-- Code block -->
+    <rect x="0" y="605" width="640" height="148" rx="6" fill="#101016" stroke="#2a2a35"/>
+    <g font-family="JetBrains Mono, Menlo, monospace" font-size="12.5">
+      <text x="14" y="628">
+        <tspan fill="#6c6c78" font-style="italic">// scan recent Joker sightings</tspan>
+      </text>
+      <text x="14" y="648">
+        <tspan fill="#f5c518" font-weight="600">const</tspan>
+        <tspan fill="#d4d4dc"> sightings </tspan>
+        <tspan fill="#c8c8d2">= </tspan>
+        <tspan fill="#6a8fb5">await</tspan>
+        <tspan fill="#d4d4dc"> bat.</tspan>
+        <tspan fill="#6a8fb5">scan</tspan>
+        <tspan fill="#8a8a96">(</tspan>
+        <tspan fill="#4a8b4a">"gotham"</tspan>
+        <tspan fill="#8a8a96">, </tspan>
+        <tspan fill="#7a5aa6">{</tspan>
+      </text>
+      <text x="14" y="668">
+        <tspan fill="#d4d4dc">  </tspan>
+        <tspan fill="#7a5aa6">suspect</tspan>
+        <tspan fill="#c8c8d2">: </tspan>
+        <tspan fill="#4a8b4a">"joker"</tspan>
+        <tspan fill="#8a8a96">,</tspan>
+      </text>
+      <text x="14" y="688">
+        <tspan fill="#d4d4dc">  </tspan>
+        <tspan fill="#7a5aa6">since</tspan>
+        <tspan fill="#c8c8d2">: </tspan>
+        <tspan fill="#4a8b4a">"2026-05-20"</tspan>
+        <tspan fill="#8a8a96">,</tspan>
+      </text>
+      <text x="14" y="708">
+        <tspan fill="#d4d4dc">  </tspan>
+        <tspan fill="#7a5aa6">priority</tspan>
+        <tspan fill="#c8c8d2">: </tspan>
+        <tspan fill="#d9a86e">9</tspan>
+        <tspan fill="#8a8a96">,</tspan>
+      </text>
+      <text x="14" y="728">
+        <tspan fill="#7a5aa6">}</tspan>
+        <tspan fill="#8a8a96">)</tspan>
+      </text>
+      <text x="14" y="748">
+        <tspan fill="#6c6c78" font-style="italic">// → 3 leads, 1 cold</tspan>
+      </text>
+    </g>
+
+    <!-- Tags row -->
+    <g transform="translate(0,790)">
+      <g>
+        <rect x="0" y="0" width="74" height="22" rx="11" fill="#f5c518" fill-opacity="0.10" stroke="#f5c518" stroke-opacity="0.30"/>
+        <text x="12" y="15" fill="#f5c518" font-size="11">#joker</text>
+      </g>
+      <g transform="translate(86,0)">
+        <rect x="0" y="0" width="74" height="22" rx="11" fill="#f5c518" fill-opacity="0.10" stroke="#f5c518" stroke-opacity="0.30"/>
+        <text x="12" y="15" fill="#f5c518" font-size="11">#arkham</text>
+      </g>
+      <g transform="translate(172,0)">
+        <rect x="0" y="0" width="98" height="22" rx="11" fill="#f5c518" fill-opacity="0.10" stroke="#f5c518" stroke-opacity="0.30"/>
+        <text x="12" y="15" fill="#f5c518" font-size="11">#cold-case</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- vignette overlay on editor pane -->
+  <rect x="328" y="74" width="1272" height="900" fill="url(#vignette)" pointer-events="none"/>
+
+  <!-- ============== STATUS BAR ============== -->
+  <rect x="0" y="974" width="1600" height="26" fill="#0a0a0c"/>
+  <line x1="0" y1="974" x2="1600" y2="974" stroke="#2a2a35"/>
+  <g font-size="11" fill="#8a8a96" letter-spacing="0.02em">
+    <text x="60" y="991">14 notes</text>
+    <text x="130" y="991">·</text>
+    <text x="146" y="991">312 words</text>
+    <text x="226" y="991">·</text>
+    <text x="242" y="991">backlinks: 4</text>
+    <text x="1400" y="991">spell ✓</text>
+    <text x="1470" y="991" fill="#f5c518">● vault sync</text>
+  </g>
+</svg>

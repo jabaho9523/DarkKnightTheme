@@ -1,8 +1,7 @@
 {
   "name": "Dark Knight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.4.0",
   "author": "jabaho9523",
-  "authorUrl": "https://github.com/jabaho9523",
-  "description": "A Gotham-noir theme for Obsidian. Deep blacks, Bat-signal gold, steel-blue accents."
+  "authorUrl": "https://github.com/jabaho9523"
 }

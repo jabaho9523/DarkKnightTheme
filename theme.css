@@ -460,11 +460,11 @@
   font-size: 0.92em;
 }
 
-/* Code blocks */
-.theme-dark pre,
-.theme-dark .markdown-preview-view pre,
-.theme-dark .HyperMD-codeblock-bg {
-  background-color: var(--code-background) !important;
+/* Code blocks — body prefix bumps specificity over Obsidian defaults */
+body.theme-dark pre,
+body.theme-dark .markdown-preview-view pre,
+body.theme-dark .HyperMD-codeblock-bg {
+  background-color: var(--code-background);
   border: 1px solid var(--dk-steel);
   border-radius: var(--radius-m);
   color: var(--dk-bone);
@@ -532,9 +532,9 @@
   border-bottom-color: var(--dk-gold-bright);
 }
 
-.theme-dark .is-unresolved,
-.theme-dark .cm-hmd-internal-link.is-unresolved {
-  color: var(--link-unresolved-color) !important;
+body.theme-dark .is-unresolved,
+body.theme-dark .cm-hmd-internal-link.is-unresolved {
+  color: var(--link-unresolved-color);
   border-bottom: 1px dashed rgba(200, 37, 44, 0.5);
 }
 

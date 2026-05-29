@@ -33,9 +33,20 @@ Not yet listed. PRs welcome.
 
 ## Compatible with
 
-- Obsidian 1.4+
-- Default core plugins (Graph, Outline, Tags, Search, Bookmarks)
-- Light mode included (Gotham at dawn — softened cream + gold)
+- Obsidian 1.4+ (including the Properties / metadata editor)
+- Default core plugins (Graph, Outline, Tags, Search, Bookmarks, Canvas)
+- Popular community plugins (Dataview, Tasks)
+- Light mode at full parity — Gotham at dawn (softened cream + gold) gets the
+  same structure as dark: gold heading rules, signal blockquotes, styled
+  tables, callouts, scrollbars, and tags. Both variants are driven by the
+  same palette tokens, so the two modes stay in lockstep.
+
+## Accessibility
+
+- Faint and code-comment text are tuned for legible contrast on Gotham black.
+- `mod-cta` buttons and checkbox markers use a contrast-aware on-accent color,
+  so gold buttons stay readable in light mode too.
+- Keyboard navigation shows a clear gold `:focus-visible` ring.
 
 ## Notes
 

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
   <!-- =========================================================
-       Dark Knight — Obsidian theme preview (stand-in screenshot)
+       Gotham Noir — Obsidian theme preview (stand-in screenshot)
        ========================================================= -->
   <defs>
     <linearGradient id="goldBar" x1="0" y1="0" x2="1" y2="0">
@@ -37,7 +37,7 @@
   <circle cx="20" cy="17" r="6" fill="#c8252c"/>
   <circle cx="40" cy="17" r="6" fill="#f5c518"/>
   <circle cx="60" cy="17" r="6" fill="#4a8b4a"/>
-  <text x="800" y="22" fill="#f5c518" font-size="12" text-anchor="middle" font-weight="600" letter-spacing="0.05em">GOTHAM VAULT — case-files/the-long-halloween.md</text>
+  <text x="800" y="22" fill="#f5c518" font-size="12" text-anchor="middle" font-weight="600" letter-spacing="0.05em">PRECINCT VAULT — case-files/the-midnight-job.md</text>
 
   <!-- ============== LEFT RIBBON ============== -->
   <rect x="0" y="34" width="48" height="966" fill="#0a0a0c"/>
@@ -90,7 +90,7 @@
   <line x1="328" y1="34" x2="328" y2="1000" stroke="#2a2a35" stroke-width="1"/>
 
   <!-- explorer header -->
-  <text x="68" y="68" fill="#8a8a96" font-size="11" letter-spacing="0.12em" font-weight="600">GOTHAM VAULT</text>
+  <text x="68" y="68" fill="#8a8a96" font-size="11" letter-spacing="0.12em" font-weight="600">PRECINCT VAULT</text>
   <line x1="68" y1="80" x2="308" y2="80" stroke="#2a2a35"/>
 
   <!-- folders / files -->
@@ -98,26 +98,26 @@
     <!-- folder: case-files (open) -->
     <text x="72" y="104" fill="#8a8a96" font-size="10">▾</text>
     <text x="88" y="104" font-weight="500">case-files</text>
-    <text x="104" y="126">the-long-halloween.md</text>
+    <text x="104" y="126">the-harbor-heist.md</text>
     <!-- active file pill -->
     <rect x="100" y="138" width="208" height="22" rx="4" fill="#f5c518" fill-opacity="0.12"/>
     <rect x="100" y="138" width="2"  height="22" fill="#f5c518"/>
-    <text x="108" y="153" fill="#f5c518">the-killing-joke.md</text>
-    <text x="104" y="174">arkham-asylum.md</text>
-    <text x="104" y="194">two-face-coin.md</text>
+    <text x="108" y="153" fill="#f5c518">the-midnight-job.md</text>
+    <text x="104" y="174">old-foundry.md</text>
+    <text x="104" y="194">marked-coin.md</text>
 
     <text x="72" y="222" fill="#8a8a96" font-size="10">▸</text>
-    <text x="88" y="222" font-weight="500">allies</text>
+    <text x="88" y="222" font-weight="500">witnesses</text>
     <text x="72" y="246" fill="#8a8a96" font-size="10">▾</text>
-    <text x="88" y="246" font-weight="500">villains</text>
-    <text x="104" y="268">joker.md</text>
-    <text x="104" y="288">scarecrow.md</text>
-    <text x="104" y="308">bane.md</text>
+    <text x="88" y="246" font-weight="500">suspects</text>
+    <text x="104" y="268">the-fixer.md</text>
+    <text x="104" y="288">the-chemist.md</text>
+    <text x="104" y="308">the-broker.md</text>
 
     <text x="72" y="336" fill="#8a8a96" font-size="10">▸</text>
-    <text x="88" y="336" font-weight="500">gear</text>
+    <text x="88" y="336" font-weight="500">evidence</text>
     <text x="72" y="360" fill="#8a8a96" font-size="10">▸</text>
-    <text x="88" y="360" font-weight="500">gotham-pd</text>
+    <text x="88" y="360" font-weight="500">precinct</text>
 
     <text x="88" y="384" fill="#d4d4dc">daily-2026-05-27.md</text>
     <text x="88" y="404" fill="#d4d4dc">index.md</text>
@@ -142,10 +142,10 @@
 
   <!-- inactive tabs -->
   <g font-size="12" fill="#8a8a96">
-    <text x="600" y="61">arkham-asylum.md</text>
-    <text x="730" y="61">joker.md</text>
-    <text x="820" y="61">two-face-coin.md</text>
-    <text x="935" y="61">daily-2026-05-27.md</text>
+    <text x="600" y="61">old-foundry.md</text>
+    <text x="710" y="61">the-fixer.md</text>
+    <text x="800" y="61">marked-coin.md</text>
+    <text x="915" y="61">daily-2026-05-27.md</text>
   </g>
 
   <!-- right pane toggles -->
@@ -169,18 +169,18 @@
     <rect x="0" y="0" width="2" height="80" fill="#f5c518"/>
     <rect x="2" y="0" width="640" height="80" fill="#14141a" rx="0"/>
     <text x="20" y="22" fill="#f5c518" font-size="10" font-family="JetBrains Mono, Menlo, monospace" letter-spacing="0.08em">CASE FILE</text>
-    <text x="20" y="42" fill="#8a8a96" font-size="11" font-family="JetBrains Mono, Menlo, monospace">tags:  #joker  #arkham  #cold-case</text>
+    <text x="20" y="42" fill="#8a8a96" font-size="11" font-family="JetBrains Mono, Menlo, monospace">tags:  #heist  #harbor  #cold-case</text>
     <text x="20" y="60" fill="#8a8a96" font-size="11" font-family="JetBrains Mono, Menlo, monospace">date:  2026-05-27   ·   status:  open</text>
 
     <!-- H1 -->
-    <text x="0" y="130" fill="#ffdb4d" font-size="34" font-weight="700" letter-spacing="-0.01em" filter="url(#goldGlow)">The Killing Joke</text>
+    <text x="0" y="130" fill="#ffdb4d" font-size="34" font-weight="700" letter-spacing="-0.01em" filter="url(#goldGlow)">The Midnight Job</text>
     <line x1="0" y1="142" x2="640" y2="142" stroke="#f5c518" stroke-opacity="0.25"/>
 
     <!-- body paragraph -->
     <g fill="#d4d4dc" font-size="14">
-      <text x="0" y="175">All it takes is one bad day to reduce the sanest man alive</text>
-      <text x="0" y="195">to lunacy. That's how far the world is from where I am.</text>
-      <text x="0" y="215">Just <tspan fill="#ffdb4d" font-weight="700">one</tspan> <tspan>·</tspan> <tspan fill="#6a8fb5" font-style="italic">bad day.</tspan></text>
+      <text x="0" y="175">The whole city sleeps, but the harbor never quite goes dark.</text>
+      <text x="0" y="195">One crew, one window, one shipment that never reached the dock.</text>
+      <text x="0" y="215">Just <tspan fill="#ffdb4d" font-weight="700">one</tspan> <tspan>·</tspan> <tspan fill="#6a8fb5" font-style="italic">bad night.</tspan></text>
     </g>
 
     <!-- H2 -->
@@ -190,8 +190,8 @@
     <!-- Blockquote -->
     <rect x="0" y="290" width="3" height="74" fill="#f5c518"/>
     <rect x="3" y="290" width="640" height="74" fill="#f5c518" fill-opacity="0.04"/>
-    <text x="22" y="316" fill="#d4d4dc" font-size="14" font-style="italic">"Why so serious? Let's put a smile on that face."</text>
-    <text x="22" y="340" fill="#8a8a96" font-size="12">— recovered from Ace Chemicals, evidence locker 7</text>
+    <text x="22" y="316" fill="#d4d4dc" font-size="14" font-style="italic">"They came in off the water. No alarms, no witnesses."</text>
+    <text x="22" y="340" fill="#8a8a96" font-size="12">— recovered from the old foundry, evidence locker 7</text>
 
     <!-- Tasks -->
     <text x="0" y="400" fill="#f5c518" font-size="22" font-weight="650">Leads</text>
@@ -201,41 +201,41 @@
       <!-- checked -->
       <rect x="0" y="425" width="14" height="14" rx="2" fill="#f5c518" stroke="#f5c518"/>
       <path d="M4 432 L7 435 L11 429" stroke="#0a0a0c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="24" y="437" fill="#5a5a66" text-decoration="line-through">Sweep Ace Chemicals catwalk</text>
+      <text x="24" y="437" fill="#5a5a66" text-decoration="line-through">Sweep the foundry catwalk</text>
 
       <rect x="0" y="450" width="14" height="14" rx="2" fill="#f5c518" stroke="#f5c518"/>
       <path d="M4 457 L7 460 L11 454" stroke="#0a0a0c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="24" y="462" fill="#5a5a66" text-decoration="line-through">Pull GCPD case 0719</text>
+      <text x="24" y="462" fill="#5a5a66" text-decoration="line-through">Pull precinct case 0719</text>
 
       <!-- unchecked -->
       <rect x="0" y="475" width="14" height="14" rx="2" fill="none" stroke="#3a3a48" stroke-width="1.5"/>
-      <text x="24" y="487">Interview <tspan fill="#f5c518">[[Harleen Quinzel]]</tspan> at Arkham</text>
+      <text x="24" y="487">Interview <tspan fill="#f5c518">[[the-fixer]]</tspan> downtown</text>
 
       <rect x="0" y="500" width="14" height="14" rx="2" fill="none" stroke="#3a3a48" stroke-width="1.5"/>
-      <text x="24" y="512">Cross-reference with <tspan fill="#c8252c">[[long-halloween-killer]]</tspan></text>
+      <text x="24" y="512">Cross-reference with <tspan fill="#c8252c">[[harbor-heist-suspect]]</tspan></text>
     </g>
 
     <!-- HR -->
     <line x1="0" y1="555" x2="640" y2="555" stroke="url(#hrFade)" stroke-width="1"/>
 
     <!-- H3 -->
-    <text x="0" y="590" fill="#e8b412" font-size="18" font-weight="600">Bat-computer query</text>
+    <text x="0" y="590" fill="#e8b412" font-size="18" font-weight="600">Records query</text>
 
     <!-- Code block -->
     <rect x="0" y="605" width="640" height="148" rx="6" fill="#101016" stroke="#2a2a35"/>
     <g font-family="JetBrains Mono, Menlo, monospace" font-size="12.5">
       <text x="14" y="628">
-        <tspan fill="#6c6c78" font-style="italic">// scan recent Joker sightings</tspan>
+        <tspan fill="#6c6c78" font-style="italic">// scan recent harbor incidents</tspan>
       </text>
       <text x="14" y="648">
         <tspan fill="#f5c518" font-weight="600">const</tspan>
-        <tspan fill="#d4d4dc"> sightings </tspan>
+        <tspan fill="#d4d4dc"> reports </tspan>
         <tspan fill="#c8c8d2">= </tspan>
         <tspan fill="#6a8fb5">await</tspan>
-        <tspan fill="#d4d4dc"> bat.</tspan>
+        <tspan fill="#d4d4dc"> records.</tspan>
         <tspan fill="#6a8fb5">scan</tspan>
         <tspan fill="#8a8a96">(</tspan>
-        <tspan fill="#4a8b4a">"gotham"</tspan>
+        <tspan fill="#4a8b4a">"harbor"</tspan>
         <tspan fill="#8a8a96">, </tspan>
         <tspan fill="#7a5aa6">{</tspan>
       </text>
@@ -243,7 +243,7 @@
         <tspan fill="#d4d4dc">  </tspan>
         <tspan fill="#7a5aa6">suspect</tspan>
         <tspan fill="#c8c8d2">: </tspan>
-        <tspan fill="#4a8b4a">"joker"</tspan>
+        <tspan fill="#4a8b4a">"the-fixer"</tspan>
         <tspan fill="#8a8a96">,</tspan>
       </text>
       <text x="14" y="688">
@@ -273,11 +273,11 @@
     <g transform="translate(0,790)">
       <g>
         <rect x="0" y="0" width="74" height="22" rx="11" fill="#f5c518" fill-opacity="0.10" stroke="#f5c518" stroke-opacity="0.30"/>
-        <text x="12" y="15" fill="#f5c518" font-size="11">#joker</text>
+        <text x="12" y="15" fill="#f5c518" font-size="11">#heist</text>
       </g>
       <g transform="translate(86,0)">
         <rect x="0" y="0" width="74" height="22" rx="11" fill="#f5c518" fill-opacity="0.10" stroke="#f5c518" stroke-opacity="0.30"/>
-        <text x="12" y="15" fill="#f5c518" font-size="11">#arkham</text>
+        <text x="12" y="15" fill="#f5c518" font-size="11">#harbor</text>
       </g>
       <g transform="translate(172,0)">
         <rect x="0" y="0" width="98" height="22" rx="11" fill="#f5c518" fill-opacity="0.10" stroke="#f5c518" stroke-opacity="0.30"/>

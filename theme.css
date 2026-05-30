@@ -1,25 +1,27 @@
 /*
-  Dark Knight — an Obsidian theme inspired by Gotham at night.
+  Gotham Noir — a city-at-night theme for Obsidian.
+  Deep blacks, signal gold, and steel-blue accents, with a noir red
+  reserved for errors and unresolved links.
   Palette:
-    Gotham Black      #0a0a0c
+    Midnight Black    #0a0a0c
     Night Sky         #14141a
     Asphalt           #1c1c24
     Steel             #2a2a35
     Concrete          #3a3a48
     Fog               #8a8a96
     Bone              #d4d4dc
-    Bat-Signal Gold   #f5c518
+    Signal Gold       #f5c518
     Signal Hover      #ffdb4d
     Steel Blue        #4a6b8a
-    Joker Red         #c8252c
-    Riddler Green     #4a8b4a
+    Noir Red          #c8252c
+    Patina Green      #4a8b4a
 */
 
 /* =========================================================
    1. THEME TOKENS — applied to both dark and light variants.
    Obsidian uses ":root" + ".theme-dark" / ".theme-light".
    This theme is a dedicated dark theme; the light mode is
-   a softened Gotham-day variant.
+   a softened city-at-dawn variant.
    ========================================================= */
 
 .theme-dark {
@@ -74,7 +76,7 @@
   --text-highlight-bg:  rgba(245, 197, 24, 0.30);
   --text-highlight-bg-active: rgba(245, 197, 24, 0.45);
 
-  /* Headings — Bat-signal gold gradient by depth */
+  /* Headings — signal gold gradient by depth */
   --h1-color: var(--dk-gold-bright);
   --h2-color: var(--dk-gold);
   --h3-color: #e8b412;
@@ -188,7 +190,7 @@
   --radius-l: 10px;
 }
 
-/* Light variant — Gotham at dawn. Same DNA, softened. */
+/* Light variant — the city at dawn. Same DNA, softened. */
 .theme-light {
   --dk-paper:       #f4f1ea;
   --dk-paper-2:     #ece8df;
@@ -393,7 +395,7 @@
   caret-color: var(--dk-gold);
 }
 
-/* Headings — Bat-signal gold, descending in intensity */
+/* Headings — signal gold, descending in intensity */
 .theme-dark .markdown-preview-view h1,
 .theme-dark .HyperMD-header-1,
 .theme-dark .cm-header-1 {
@@ -438,7 +440,7 @@
 .theme-dark .markdown-preview-view em,
 .theme-dark .cm-em { color: var(--dk-blue-bright); }
 
-/* Blockquote — Bat-signal column down the side */
+/* Blockquote — signal column down the side */
 .theme-dark .markdown-preview-view blockquote,
 .theme-dark .HyperMD-quote {
   border-left: 3px solid var(--dk-gold);
@@ -558,8 +560,10 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
   font-weight: 600;
 }
 
-/* Checkboxes */
-.theme-dark input[type="checkbox"] {
+/* Checkboxes — scoped to Markdown task list items so we don't clobber
+   Obsidian's toggle switches (which use a hidden checkbox in .checkbox-container) */
+.theme-dark .markdown-preview-view input[type="checkbox"],
+.theme-dark .markdown-source-view input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   width: 16px;
@@ -573,16 +577,19 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
   transition: border-color 120ms ease, background-color 120ms ease;
 }
 
-.theme-dark input[type="checkbox"]:hover {
+.theme-dark .markdown-preview-view input[type="checkbox"]:hover,
+.theme-dark .markdown-source-view input[type="checkbox"]:hover {
   border-color: var(--dk-gold);
 }
 
-.theme-dark input[type="checkbox"]:checked {
+.theme-dark .markdown-preview-view input[type="checkbox"]:checked,
+.theme-dark .markdown-source-view input[type="checkbox"]:checked {
   background-color: var(--dk-gold);
   border-color: var(--dk-gold);
 }
 
-.theme-dark input[type="checkbox"]:checked::after {
+.theme-dark .markdown-preview-view input[type="checkbox"]:checked::after,
+.theme-dark .markdown-source-view input[type="checkbox"]:checked::after {
   content: "";
   position: absolute;
   top: 1px;
@@ -666,7 +673,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
 
 .theme-dark button,
 .theme-dark .clickable-icon,
-.theme-dark input,
+.theme-dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 .theme-dark textarea,
 .theme-dark select {
   background-color: var(--dk-asphalt);
@@ -705,7 +712,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
   border-color: var(--dk-red);
 }
 
-.theme-dark input:focus,
+.theme-dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
 .theme-dark textarea:focus,
 .theme-dark select:focus {
   border-color: var(--dk-gold);
@@ -835,7 +842,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
 }
 
 /* =========================================================
-   7. CALLOUTS — re-skinned with Dark Knight palette
+   7. CALLOUTS — re-skinned with the Gotham Noir palette
    ========================================================= */
 
 .theme-dark .callout {

@@ -481,13 +481,21 @@
   font-size: 0.92em;
 }
 
-/* Code blocks — body prefix bumps specificity over Obsidian defaults */
+/* Code blocks — body prefix bumps specificity over Obsidian defaults.
+   Reading view renders one <pre> per block, so it can carry the border. */
 body:is(.theme-dark, .theme-light) pre,
-body:is(.theme-dark, .theme-light) .markdown-preview-view pre,
-body:is(.theme-dark, .theme-light) .HyperMD-codeblock-bg {
+body:is(.theme-dark, .theme-light) .markdown-preview-view pre {
   background-color: var(--code-background);
   border: 1px solid var(--dk-steel);
   border-radius: var(--radius-m);
+  color: var(--dk-bone);
+}
+
+/* Live Preview applies .HyperMD-codeblock-bg per LINE; a border here would
+   draw a box around every line (see issue #5). Background only. */
+body:is(.theme-dark, .theme-light) .HyperMD-codeblock-bg {
+  background-color: var(--code-background);
+  border: none;
   color: var(--dk-bone);
 }
 
@@ -579,8 +587,11 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
   font-weight: 600;
 }
 
-/* Checkboxes */
-:is(.theme-dark, .theme-light) input[type="checkbox"] {
+/* Checkboxes — scoped to Markdown task-list items so we don't clobber
+   Obsidian's settings toggle switches, which use a hidden <input> inside
+   .checkbox-container (see issue #4). */
+:is(.theme-dark, .theme-light) .markdown-preview-view input[type="checkbox"],
+:is(.theme-dark, .theme-light) .markdown-source-view input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   width: 16px;
@@ -594,16 +605,19 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
   transition: border-color 120ms ease, background-color 120ms ease;
 }
 
-:is(.theme-dark, .theme-light) input[type="checkbox"]:hover {
+:is(.theme-dark, .theme-light) .markdown-preview-view input[type="checkbox"]:hover,
+:is(.theme-dark, .theme-light) .markdown-source-view input[type="checkbox"]:hover {
   border-color: var(--dk-gold);
 }
 
-:is(.theme-dark, .theme-light) input[type="checkbox"]:checked {
+:is(.theme-dark, .theme-light) .markdown-preview-view input[type="checkbox"]:checked,
+:is(.theme-dark, .theme-light) .markdown-source-view input[type="checkbox"]:checked {
   background-color: var(--dk-gold);
   border-color: var(--dk-gold);
 }
 
-:is(.theme-dark, .theme-light) input[type="checkbox"]:checked::after {
+:is(.theme-dark, .theme-light) .markdown-preview-view input[type="checkbox"]:checked::after,
+:is(.theme-dark, .theme-light) .markdown-source-view input[type="checkbox"]:checked::after {
   content: "";
   position: absolute;
   top: 2px;
@@ -613,6 +627,12 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
   border: solid var(--checkbox-marker-color);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+/* Explicit guard: never restyle the input behind a settings toggle switch. */
+:is(.theme-dark, .theme-light) .checkbox-container input[type="checkbox"] {
+  appearance: auto;
+  -webkit-appearance: auto;
 }
 
 /* Tags */

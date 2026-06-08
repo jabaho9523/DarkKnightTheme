@@ -3,7 +3,7 @@
 All notable changes to the Dark Knight theme are documented here.
 This project follows [Semantic Versioning](https://semver.org/).
 
-## [1.1.2] — 2026-06-08
+## [1.1.3] — 2026-06-08
 
 ### Fixed
 - **Settings toggle switches no longer break** (#4). Checkbox styling was
@@ -39,5 +39,5 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Initial Gotham-noir dark theme with light variant, core-plugin support,
   callouts, graph view, and code syntax highlighting.
 
-[1.1.2]: https://github.com/jabaho9523/DarkKnightTheme/releases/tag/1.1.2
+[1.1.3]: https://github.com/jabaho9523/DarkKnightTheme/releases/tag/1.1.3
 [1.1.0]: https://github.com/jabaho9523/DarkKnightTheme/releases/tag/1.1.0

@@ -567,14 +567,27 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
   border-bottom: 1px dashed rgba(var(--dk-red-rgb), 0.5);
 }
 
-/* Horizontal rule */
+/* Horizontal rule — top breathing room, but hug the box that follows
+   (the line reads as belonging to the content below it). */
 :is(.theme-dark, .theme-light) hr,
 :is(.theme-dark, .theme-light) .markdown-preview-view hr {
   border: none;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--dk-gold) 20%, var(--dk-gold) 80%, transparent);
   opacity: 0.55;
-  margin: 2em 0;
+  margin: 1.8em 0 0.6em;
+}
+
+/* Pane & sidebar resize handles — Obsidian tints these with the accent
+   (gold), so they read as solid, asymmetric vertical bars. Give them the
+   same dimmed, end-fading look as the hr, identical on both sides. */
+:is(.theme-dark, .theme-light) .workspace-leaf-resize-handle {
+  background: linear-gradient(180deg, transparent, rgba(var(--dk-gold-rgb), 0.20) 15%, rgba(var(--dk-gold-rgb), 0.20) 85%, transparent);
+  transition: background 120ms ease;
+}
+
+:is(.theme-dark, .theme-light) .workspace-leaf-resize-handle:hover {
+  background: linear-gradient(180deg, transparent, rgba(var(--dk-gold-rgb), 0.50) 15%, rgba(var(--dk-gold-rgb), 0.50) 85%, transparent);
 }
 
 /* Lists */

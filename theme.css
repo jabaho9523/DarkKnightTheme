@@ -1015,7 +1015,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 :is(.theme-dark, .theme-light) .callout {
   border-radius: var(--radius-m);
   border: 1px solid var(--dk-steel);
-  background-color: rgba(var(--callout-color), 0.06);
+  background-color: color-mix(in srgb, var(--callout-color) 6%, transparent);
   padding: 0.6em 0.9em;
   margin: 1em 0;
 }

@@ -19,7 +19,7 @@
   1. Shared derived tokens — written once, resolved per theme via the
      raw --dk-* palette (which differs between dark and light). Because
      CSS custom properties resolve lazily, a shared rule like
-     "rgba(var(--dk-gold-rgb), 0.1)" yields bright gold in dark mode and
+     "color-mix(in srgb, var(--dk-gold-rgb) 10%, transparent)" yields bright gold in dark mode and
      deep gold in light mode automatically.
   2. .theme-dark  — raw palette + surfaces + the few values unique to dark.
   3. .theme-light — raw palette + surfaces + the few values unique to light.
@@ -39,16 +39,16 @@
   --background-primary-alt:       var(--dk-night);
   --background-secondary:         var(--dk-night);
   --background-secondary-alt:     var(--dk-asphalt);
-  --background-modifier-active-hover: rgba(var(--dk-gold-rgb), 0.12);
+  --background-modifier-active-hover: color-mix(in srgb, var(--dk-gold-rgb) 12%, transparent);
   --background-modifier-border:   var(--dk-steel);
   --background-modifier-border-hover:  var(--dk-concrete);
   --background-modifier-border-focus:  var(--dk-gold);
   --background-modifier-form-field:    var(--dk-night);
   --background-modifier-form-field-highlighted: var(--dk-asphalt);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.6);
-  --background-modifier-success:  rgba(var(--dk-green-rgb), 0.20);
-  --background-modifier-error:    rgba(var(--dk-red-rgb), 0.20);
-  --background-modifier-error-hover: rgba(var(--dk-red-rgb), 0.30);
+  --background-modifier-success:  color-mix(in srgb, var(--dk-green-rgb) 20%, transparent);
+  --background-modifier-error:    color-mix(in srgb, var(--dk-red-rgb) 20%, transparent);
+  --background-modifier-error-hover: color-mix(in srgb, var(--dk-red-rgb) 30%, transparent);
 
   /* Text */
   --text-normal:        var(--dk-bone);
@@ -59,9 +59,9 @@
   --text-warning:       var(--dk-gold);
   --text-accent:        var(--dk-gold);
   --text-accent-hover:  var(--dk-gold-bright);
-  --text-selection:     rgba(var(--dk-gold-rgb), 0.25);
-  --text-highlight-bg:  rgba(var(--dk-gold-rgb), 0.30);
-  --text-highlight-bg-active: rgba(var(--dk-gold-rgb), 0.45);
+  --text-selection:     color-mix(in srgb, var(--dk-gold-rgb) 25%, transparent);
+  --text-highlight-bg:  color-mix(in srgb, var(--dk-gold-rgb) 30%, transparent);
+  --text-highlight-bg-active: color-mix(in srgb, var(--dk-gold-rgb) 45%, transparent);
 
   /* Accent (interactive) */
   --interactive-accent:        var(--dk-gold);
@@ -83,9 +83,9 @@
   /* Tag */
   --tag-color:            var(--dk-gold);
   --tag-color-hover:      var(--text-on-accent);
-  --tag-background:       rgba(var(--dk-gold-rgb), 0.10);
+  --tag-background:       color-mix(in srgb, var(--dk-gold-rgb) 10%, transparent);
   --tag-background-hover: var(--dk-gold);
-  --tag-border-color:     rgba(var(--dk-gold-rgb), 0.30);
+  --tag-border-color:     color-mix(in srgb, var(--dk-gold-rgb) 30%, transparent);
   --tag-border-color-hover: var(--dk-gold);
 
   /* Code (token colors; backgrounds set per theme) */
@@ -101,7 +101,7 @@
 
   /* Caret / selection */
   --caret-color:           var(--dk-gold);
-  --selection-background:  rgba(var(--dk-gold-rgb), 0.22);
+  --selection-background:  color-mix(in srgb, var(--dk-gold-rgb) 22%, transparent);
 
   /* Scrollbars */
   --scrollbar-bg:           transparent;
@@ -132,7 +132,7 @@
   --hr-color: var(--dk-steel);
 
   --table-header-background: var(--dk-night);
-  --table-row-hover-background: rgba(var(--dk-gold-rgb), 0.05);
+  --table-row-hover-background: color-mix(in srgb, var(--dk-gold-rgb) 5%, transparent);
   --table-border-color: var(--dk-steel);
 
   --checkbox-color:        var(--dk-gold);
@@ -148,7 +148,7 @@
 
   /* Focus ring */
   --input-focus-border-color: var(--dk-gold);
-  --input-focus-outline:      0 0 0 2px rgba(var(--dk-gold-rgb), 0.25);
+  --input-focus-outline:      0 0 0 2px color-mix(in srgb, var(--dk-gold-rgb) 25%, transparent);
 
   /* Modal */
   --modal-border-color: var(--dk-steel);
@@ -188,14 +188,14 @@
   --dk-purple:      #7a5aa6;
 
   /* RGB channels for rgba() compositing — resolve per theme */
-  --dk-gold-rgb:   245, 197, 24;
-  --dk-red-rgb:    200, 37, 44;
-  --dk-green-rgb:  74, 139, 74;
-  --dk-blue-rgb:   106, 143, 181;
-  --dk-purple-rgb: 122, 90, 166;
+  --dk-gold-rgb:   rgb(245, 197, 24);
+  --dk-red-rgb:    rgb(200, 37, 44);
+  --dk-green-rgb:  rgb(74, 139, 74);
+  --dk-blue-rgb:   rgb(106, 143, 181);
+  --dk-purple-rgb: rgb(122, 90, 166);
 
   /* Dark-specific surfaces */
-  --background-modifier-hover:  rgba(var(--dk-gold-rgb), 0.06);
+  --background-modifier-hover:  color-mix(in srgb, var(--dk-gold-rgb) 6%, transparent);
   --background-modifier-cover:  rgba(5, 5, 8, 0.78);
   --modal-background:           var(--dk-night);
 
@@ -215,7 +215,7 @@
   --code-comment:     #84848f;        /* lifted for contrast on code bg */
   --code-punctuation: #8a8a96;
 
-  --blockquote-background:   rgba(var(--dk-gold-rgb), 0.04);
+  --blockquote-background:   color-mix(in srgb, var(--dk-gold-rgb) 4%, transparent);
   --table-row-alt-background: rgba(255, 255, 255, 0.015);
 }
 
@@ -244,14 +244,14 @@
   --dk-green:       #3a6f3a;
   --dk-purple:      #5f4685;
 
-  --dk-gold-rgb:   184, 146, 15;
-  --dk-red-rgb:    165, 29, 35;
-  --dk-green-rgb:  58, 111, 58;
-  --dk-blue-rgb:   47, 84, 112;
-  --dk-purple-rgb: 95, 70, 133;
+  --dk-gold-rgb:   rgb(184, 146, 15);
+  --dk-red-rgb:    rgb(165, 29, 35);
+  --dk-green-rgb:  rgb(58, 111, 58);
+  --dk-blue-rgb:   rgb(47, 84, 112);
+  --dk-purple-rgb: rgb(95, 70, 133);
 
   /* Light-specific surfaces */
-  --background-modifier-hover:  rgba(var(--dk-gold-rgb), 0.10);
+  --background-modifier-hover:  color-mix(in srgb, var(--dk-gold-rgb) 10%, transparent);
   --background-modifier-cover:  rgba(40, 38, 32, 0.40);
   --modal-background:           #faf8f2;
 
@@ -271,7 +271,7 @@
   --code-comment:     #8a8470;
   --code-punctuation: #6a6a74;
 
-  --blockquote-background:   rgba(var(--dk-gold-rgb), 0.06);
+  --blockquote-background:   color-mix(in srgb, var(--dk-gold-rgb) 6%, transparent);
   --table-row-alt-background: rgba(0, 0, 0, 0.025);
 }
 
@@ -342,7 +342,7 @@
 
 :is(.theme-dark, .theme-light) .side-dock-ribbon-action:hover {
   color: var(--dk-gold);
-  background-color: rgba(var(--dk-gold-rgb), 0.06);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 6%, transparent);
 }
 
 :is(.theme-dark, .theme-light) .side-dock-ribbon-action.is-active {
@@ -358,13 +358,13 @@
 
 :is(.theme-dark, .theme-light) .nav-file-title:hover,
 :is(.theme-dark, .theme-light) .nav-folder-title:hover {
-  background-color: rgba(var(--dk-gold-rgb), 0.06);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 6%, transparent);
   color: var(--dk-gold-bright);
 }
 
 :is(.theme-dark, .theme-light) .nav-file-title.is-active,
 :is(.theme-dark, .theme-light) .nav-file.is-active > .nav-file-title {
-  background-color: rgba(var(--dk-gold-rgb), 0.12);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 12%, transparent);
   color: var(--dk-gold);
   box-shadow: inset 2px 0 0 var(--dk-gold);
 }
@@ -423,7 +423,7 @@
   color: var(--h1-color);
   font-weight: 700;
   letter-spacing: -0.01em;
-  border-bottom: 1px solid rgba(var(--dk-gold-rgb), 0.25);
+  border-bottom: 1px solid color-mix(in srgb, var(--dk-gold-rgb) 25%, transparent);
   padding-bottom: 0.25em;
 }
 
@@ -433,7 +433,7 @@
   color: var(--h2-color);
   font-weight: 650;
   letter-spacing: -0.005em;
-  border-bottom: 1px solid rgba(var(--dk-gold-rgb), 0.15);
+  border-bottom: 1px solid color-mix(in srgb, var(--dk-gold-rgb) 15%, transparent);
   padding-bottom: 0.2em;
 }
 
@@ -550,7 +550,7 @@ body:is(.theme-dark, .theme-light) .HyperMD-codeblock-bg {
 :is(.theme-dark, .theme-light) .cm-hmd-internal-link {
   color: var(--link-color);
   text-decoration: none;
-  border-bottom: 1px dotted rgba(var(--dk-gold-rgb), 0.4);
+  border-bottom: 1px dotted color-mix(in srgb, var(--dk-gold-rgb) 40%, transparent);
   transition: color 120ms ease, border-color 120ms ease;
 }
 
@@ -564,7 +564,7 @@ body:is(.theme-dark, .theme-light) .HyperMD-codeblock-bg {
 body:is(.theme-dark, .theme-light) .is-unresolved,
 body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
   color: var(--link-unresolved-color);
-  border-bottom: 1px dashed rgba(var(--dk-red-rgb), 0.5);
+  border-bottom: 1px dashed color-mix(in srgb, var(--dk-red-rgb) 50%, transparent);
 }
 
 /* Horizontal rule — top breathing room, but hug the box that follows
@@ -582,12 +582,12 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
    (gold), so they read as solid, asymmetric vertical bars. Give them the
    same dimmed, end-fading look as the hr, identical on both sides. */
 :is(.theme-dark, .theme-light) .workspace-leaf-resize-handle {
-  background: linear-gradient(180deg, transparent, rgba(var(--dk-gold-rgb), 0.20) 15%, rgba(var(--dk-gold-rgb), 0.20) 85%, transparent);
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--dk-gold-rgb) 20%, transparent) 15%, color-mix(in srgb, var(--dk-gold-rgb) 20%, transparent) 85%, transparent);
   transition: background 120ms ease;
 }
 
 :is(.theme-dark, .theme-light) .workspace-leaf-resize-handle:hover {
-  background: linear-gradient(180deg, transparent, rgba(var(--dk-gold-rgb), 0.50) 15%, rgba(var(--dk-gold-rgb), 0.50) 85%, transparent);
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--dk-gold-rgb) 50%, transparent) 15%, color-mix(in srgb, var(--dk-gold-rgb) 50%, transparent) 85%, transparent);
 }
 
 /* Lists */
@@ -786,7 +786,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
   background-color: var(--modal-background);
   border: 1px solid var(--modal-border-color);
   border-radius: var(--radius-l);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(var(--dk-gold-rgb), 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px color-mix(in srgb, var(--dk-gold-rgb) 6%, transparent);
 }
 
 :is(.theme-dark, .theme-light) .modal-title {
@@ -818,7 +818,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 :is(.theme-dark, .theme-light) .suggestion-item.is-selected,
 :is(.theme-dark, .theme-light) .menu-item.selected,
 :is(.theme-dark, .theme-light) .menu-item:hover {
-  background-color: rgba(var(--dk-gold-rgb), 0.12);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 12%, transparent);
   color: var(--dk-gold-bright);
 }
 
@@ -859,7 +859,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 }
 
 :is(.theme-dark, .theme-light) .vertical-tab-nav-item.is-active {
-  background-color: rgba(var(--dk-gold-rgb), 0.10);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 10%, transparent);
   color: var(--dk-gold);
   box-shadow: inset 2px 0 0 var(--dk-gold);
 }
@@ -888,7 +888,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 }
 
 :is(.theme-dark, .theme-light) .metadata-property:hover {
-  background-color: rgba(var(--dk-gold-rgb), 0.04);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 4%, transparent);
 }
 
 /* =========================================================
@@ -901,7 +901,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 }
 
 :is(.theme-dark, .theme-light) .search-result-file-match:hover {
-  background-color: rgba(var(--dk-gold-rgb), 0.05);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 5%, transparent);
 }
 
 :is(.theme-dark, .theme-light) .search-result-file-matched-text {
@@ -970,7 +970,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 
 :is(.theme-dark, .theme-light) .dataview.inline-field-value {
   color: var(--dk-bone);
-  background-color: rgba(var(--dk-gold-rgb), 0.06);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 6%, transparent);
   border-radius: var(--radius-s);
   padding: 0 4px;
 }
@@ -1015,7 +1015,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 :is(.theme-dark, .theme-light) .callout {
   border-radius: var(--radius-m);
   border: 1px solid var(--dk-steel);
-  background-color: rgba(var(--callout-color), 0.06);
+  background-color: color-mix(in srgb, var(--callout-color) 6%, transparent);
   padding: 0.6em 0.9em;
   margin: 1em 0;
 }
@@ -1045,19 +1045,19 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 /* Heading & signal glow — only in dark mode, where it reads as light. */
 .theme-dark .markdown-preview-view h1,
 .theme-dark .HyperMD-header-1,
-.theme-dark .cm-header-1 { text-shadow: 0 0 18px rgba(var(--dk-gold-rgb), 0.18); }
+.theme-dark .cm-header-1 { text-shadow: 0 0 18px color-mix(in srgb, var(--dk-gold-rgb) 18%, transparent); }
 
 .theme-dark .workspace-tab-header.is-active::after {
-  box-shadow: 0 0 8px rgba(var(--dk-gold-rgb), 0.45);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--dk-gold-rgb) 45%, transparent);
 }
 
 .theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title {
-  text-shadow: 0 0 6px rgba(var(--dk-gold-rgb), 0.25);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--dk-gold-rgb) 25%, transparent);
 }
 
 .theme-dark .markdown-preview-view blockquote,
 .theme-dark .HyperMD-quote {
-  box-shadow: -2px 0 12px rgba(var(--dk-gold-rgb), 0.08);
+  box-shadow: -2px 0 12px color-mix(in srgb, var(--dk-gold-rgb) 8%, transparent);
 }
 
 .theme-dark .markdown-preview-view mark,
@@ -1065,7 +1065,7 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 
 .theme-dark button.mod-cta:hover,
 .theme-dark .mod-cta:hover {
-  box-shadow: 0 0 12px rgba(var(--dk-gold-rgb), 0.4);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--dk-gold-rgb) 40%, transparent);
 }
 
 /* Soft vignette on the active editor */
@@ -1088,13 +1088,13 @@ body:is(.theme-dark, .theme-light) .cm-hmd-internal-link.is-unresolved {
 :is(.theme-dark, .theme-light) .internal-embed {
   border: 1px solid var(--dk-steel);
   border-radius: var(--radius-m);
-  background-color: rgba(var(--dk-gold-rgb), 0.02);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 2%, transparent);
 }
 
 /* File explorer drag-handle hover lift */
 :is(.theme-dark, .theme-light) .nav-file-title.is-being-dragged,
 :is(.theme-dark, .theme-light) .nav-folder-title.is-being-dragged {
-  background-color: rgba(var(--dk-gold-rgb), 0.15);
+  background-color: color-mix(in srgb, var(--dk-gold-rgb) 15%, transparent);
   color: var(--dk-gold-bright);
 }
 
